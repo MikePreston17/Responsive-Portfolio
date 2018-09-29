@@ -1,0 +1,168 @@
+header {
+    padding: 0px;
+    color: #fff;
+    background: white;
+    text-align: center;
+    overflow: hidden;
+    min-height: 100px;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Background pattern from Toptal Subtle Patterns */
+body {
+    background-image: url("../images/backgrounds/polonez_car_@2X.png");
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    background-color: #4aaaa5;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding-bottom: 0px;
+    margin: 0px;
+    height: 100%;
+    padding: 35px;
+}
+
+section {
+    /* clear: both; */
+    float: right;
+    border: rgba(251, 255, 0, 0.616) 3px solid;
+}
+
+p {
+    /* used for paragraphs and all text besides the headings */
+    color: #777;
+}
+
+input,
+textarea {
+    /* border: solid green; */
+    padding: 5px;
+    margin: 0px;
+    width: 100%;
+}
+
+footer {
+    background-color: #666;
+    float: clear;
+}
+
+input {
+    line-height: 150%;
+    height: 75%;
+}
+
+div {
+    /* border: blue 3px double; */
+    color: #777;
+}
+
+div.card {
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-top: 32px;
+    padding: 30px;
+}
+
+div.menu {
+    float: right;
+    /* border: hotpink 3px solid; */
+    float: right;
+}
+
+section.left {
+    float: left;
+    /* border: rgba(251, 255, 0, 0.616) 3px solid; */
+}
+
+nav>a.accent {
+    background-color: #fff;
+    /* padding-top: 0px;
+    padding-left: 0px;     */
+    color: #4aaaa5;
+    /* margin-bottom: 35px;
+    border-bottom: 2px solid #ccc; */
+}
+
+img.bounded {
+    height: 200px;
+    float: left;
+    /* border: orangered 2px solid; */
+    margin: 5px;
+}
+
+.menu * {
+    background: initial;
+    border: 0px;
+    border-left: 2px solid #ccc;
+}
+
+.menu *:first-child {
+    border: 0px;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Use on all 3 pages */
+.main {
+    background-color: #fff;
+}
+
+.container {
+    border: hotpink solid dotted;
+    position: relative;
+    margin: auto;
+    /*keeping this, as it will float 'center'*/
+    width: 960px;
+}
+
+.name {
+    float: left;
+}
+
+.link {
+    color: #666;
+    padding: 10px;
+}
+
+.ninja {
+    visibility: hidden;
+    color: black;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        border: rgb(214, 26, 189) 3px solid;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        border: rgb(26, 214, 214) 2px solid;
+    }
+}
+
+@media screen and (max-width:980px) {
+    body {
+        border: orangered 1px solid;
+    }
+}
+
+/* Portrait and Landscape */
+/* @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {} */
+
+/* Portrait */
+/* @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {} */
+
+/* Landscape */
+/* @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {} */
