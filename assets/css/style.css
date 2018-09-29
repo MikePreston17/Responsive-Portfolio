@@ -25,10 +25,8 @@ h1 {
     padding: 35px;
 }
 
-section {
-    /* clear: both; */
-    float: right;
-    border: rgba(251, 255, 0, 0.616) 3px solid;
+form {
+    max-width: 560px;
 }
 
 p {
@@ -38,10 +36,14 @@ p {
 
 input,
 textarea {
-    /* border: solid green; */
     padding: 5px;
     margin: 0px;
     width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 50px;
 }
 
 footer {
@@ -55,7 +57,6 @@ input {
 }
 
 div {
-    /* border: blue 3px double; */
     color: #777;
 }
 
@@ -66,30 +67,37 @@ div.card {
     padding: 30px;
 }
 
+div>h1.name {
+    float: left;
+}
+
+div.center {
+    display: flex;
+    align-items: center;
+}
+
 div.menu {
-    float: right;
-    /* border: hotpink 3px solid; */
-    float: right;
+    display: flex;
+    margin: auto;
+    align-items: center;
 }
 
 section.left {
     float: left;
-    /* border: rgba(251, 255, 0, 0.616) 3px solid; */
 }
 
-nav>a.accent {
+h1.accent {
     background-color: #fff;
-    /* padding-top: 0px;
-    padding-left: 0px;     */
+    padding-top: 0px;
+    padding-left: 0px;
     color: #4aaaa5;
-    /* margin-bottom: 35px;
-    border-bottom: 2px solid #ccc; */
+    margin-bottom: 35px;
+    border-bottom: 2px solid #ccc;
 }
 
 img.bounded {
     height: 200px;
     float: left;
-    /* border: orangered 2px solid; */
     margin: 5px;
 }
 
@@ -118,16 +126,15 @@ img.bounded {
     background-color: #fff;
 }
 
-.container {
-    border: hotpink solid dotted;
-    position: relative;
-    margin: auto;
-    /*keeping this, as it will float 'center'*/
-    width: 960px;
+.gallery {
+    clear: both;
+    float: left;
 }
 
-.name {
-    float: left;
+.container {
+    position: relative;
+    margin: auto;
+    width: 960px;
 }
 
 .link {
@@ -140,29 +147,98 @@ img.bounded {
     color: black;
 }
 
-@media screen and (max-width:768px) {
-    body {
-        border: rgb(214, 26, 189) 3px solid;
-    }
+@media screen and (min-width: 980px) {
+    /* body {
+        border: gold solid 1px;
+    } */
 }
 
 @media screen and (max-width:768px) {
+
+    div>h1.name {
+        float: left;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    div.menu {
+        margin: 0;
+        display: flex;
+        margin: auto;
+        float: right;
+        align-items: center;
+    }
+
+    .container,
     body {
-        border: rgb(26, 214, 214) 2px solid;
+        max-width: 728px;
+    }
+
+    div.container.card {
+        max-width: 728px;
+        box-sizing: border-box;
+        padding: 2px;
+    }
+
+    div>form {
+        max-width: 480px;
     }
 }
 
-@media screen and (max-width:980px) {
+@media screen and (max-width:640px) {
+
+    div.menu {
+        display: flex;
+        margin: 0px;
+        float: right;
+        align-items: center;
+    }
+
+    h1.name {
+        clear: both;
+        padding: 1px;
+        margin: 1px;
+    }
+
+    .container,
     body {
-        border: orangered 1px solid;
+        max-width: 600px;
+    }
+
+    div.container.card {
+        max-width: 500px;
+        box-sizing: border-box;
+        padding: 2px;
+    }
+
+    div>form {
+        max-width: 360px;
+    }
+
+    header {
+        position: static;
+        /*DO NOT DELETE!*/
+    }
+
+    .container,
+    body {
+        max-width: 600px;
+    }
+
+    div.container.card {
+        max-width: 500px;
+        box-sizing: border-box;
+        padding: 2px;
+    }
+
+    .gallery {
+        width: 390px;
+        height: 260px;
+    }
+
+    .bounding-box {
+        background-image: url(...);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 }
-
-/* Portrait and Landscape */
-/* @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {} */
-
-/* Portrait */
-/* @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {} */
-
-/* Landscape */
-/* @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {} */
