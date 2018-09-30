@@ -60,14 +60,7 @@ div {
     color: #777;
 }
 
-div.card {
-    box-sizing: border-box;
-    background-color: #fff;
-    margin-top: 32px;
-    padding: 30px;
-}
-
-div>h1.name {
+h1.name {
     float: left;
 }
 
@@ -76,10 +69,20 @@ div.center {
     align-items: center;
 }
 
-div.menu {
+.menu {
     display: flex;
     margin: auto;
     align-items: center;
+}
+
+.menu * {
+    background: initial;
+    border: 0px;
+    border-left: 2px solid #ccc;
+}
+
+.menu *:first-child {
+    border: 0px;
 }
 
 section.left {
@@ -101,16 +104,6 @@ img.bounded {
     margin: 5px;
 }
 
-.menu * {
-    background: initial;
-    border: 0px;
-    border-left: 2px solid #ccc;
-}
-
-.menu *:first-child {
-    border: 0px;
-}
-
 .clearfix {
     overflow: auto;
 }
@@ -129,6 +122,13 @@ img.bounded {
 .gallery {
     clear: both;
     float: left;
+}
+
+div.card {
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-top: 32px;
+    padding: 30px;
 }
 
 .container {
@@ -155,23 +155,22 @@ img.bounded {
 
 @media screen and (max-width:768px) {
 
-    div>h1.name {
-        float: left;
-        padding: 10px;
-        margin: 10px;
+    .menu {
+        clear: both;
+        width: 215px;
     }
 
-    div.menu {
-        margin: 0;
-        display: flex;
-        margin: auto;
-        float: right;
-        align-items: center;
+    .name {
+        width: 100%;
     }
 
-    .container,
-    body {
+    header .container {
         max-width: 728px;
+        margin: unset;
+    }
+
+    div.center {
+        display: block;
     }
 
     div.container.card {
@@ -180,29 +179,25 @@ img.bounded {
         padding: 2px;
     }
 
-    div>form {
+    form {
         max-width: 480px;
     }
 }
 
 @media screen and (max-width:640px) {
 
-    div.menu {
-        display: flex;
-        margin: 0px;
-        float: right;
-        align-items: center;
-    }
-
-    h1.name {
+    .menu {
         clear: both;
-        padding: 1px;
-        margin: 1px;
+        width: 215px;
     }
 
-    .container,
-    body {
+    .name {
+        width: 100%;
+    }
+
+    header .container {
         max-width: 600px;
+        margin: unset;
     }
 
     div.container.card {
@@ -211,7 +206,7 @@ img.bounded {
         padding: 2px;
     }
 
-    div>form {
+    form {
         max-width: 360px;
     }
 
@@ -220,9 +215,13 @@ img.bounded {
         /*DO NOT DELETE!*/
     }
 
-    .container,
-    body {
+    div.center {
+        display: block;
+    }
+
+    .container {
         max-width: 600px;
+        align-items: normal;
     }
 
     div.container.card {
